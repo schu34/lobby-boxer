@@ -1,0 +1,25 @@
+{
+  "name": "Lobby Boxer Website",
+  "version": "0.0.0",
+  "authors": [
+    "Matthew Schupack <schu34@gmail.com>"
+  ],
+  "description": "Homepage for Lobby Boxer",
+  "main": "index.html",
+  "keywords": [
+    "Lobby",
+    "Boxer",
+    "website"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
