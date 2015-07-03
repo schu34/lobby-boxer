@@ -49,7 +49,10 @@ var playQueue = {
         this.playFirst();
     },
     pause: function(){
-        song.pause();
+        if(this.song.paused)
+            this.song.play();
+        else
+            this.song.pause();
     },
     playNext: function(){
         var nextNum = this.currentPositionInQueue + 1;
@@ -61,7 +64,10 @@ var playQueue = {
     },
     playPrev: function(){
         var prevNum = this.currentPositionInQueue - 1;
-        if(prevNum === 0 || nextNum > this.queue.length){
+
+        if(song.currentTime < 2){
+            this.song.currentTime = 0;
+        } else if(prevNum === 0 || nextNum > this.queue.length){
             this.reset();
         } else {
             this.playSong(nextNum);
@@ -71,6 +77,7 @@ var playQueue = {
         this.song = new Audio();
         this.currentPositionInQueue = -1;
         this.queue = [];
+        this.label.innerText = "";
     }
 };
 
@@ -82,6 +89,8 @@ window.onload = function(){
     imgs[1].onclick = function(){playQueue.playAlbum(lobbyBoxerEP);};
 
     document.getElementById('nav-play').onclick = function(){playQueue.pause();};
+    document.getElementById('nav-next').onclick = function(){playQueue.playNext();};
+    document.getElementById('nav-back').onclick = function(){playQueue.playPrev();};
 
     playQueue.label = document.getElementById('song-title');
 

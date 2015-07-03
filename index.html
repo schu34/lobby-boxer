@@ -8,7 +8,59 @@
         <meta name="viewport" content="content">
     </head>
     <body>
-        <iframe src="html/splash.html" width="100%" height="90%" scrolling="no"></iframe>
-        <iframe src="html/player.html" width="100%" height="10%" scrolling="no"></iframe>
+        <div class="lb-splash">
+            <div>
+                <h1 class="lb-title">LOBBY BOXER</h1>
+                <div class="lb-nav">
+                    <ul class="nav">
+                        <li class="lb-nav-list">| <a href="javascript:;" class="pure-menu-link">Shows</a></li>
+                        <li class="lb-nav-list">| <a href="javascript:;" class="pure-menu-link">Merch </a></li>
+                        <li class="lb-nav-list">| <a href="javascript:;" class="pure-menu-link">News </a></li>
+                        <li class="lb-nav-list">| <a href="https://www.facebook.com/LobbyBoxerStL" class="pure-menu-link">Facebook </a></li>
+                        <li class="lb-nav-list">| <a href="https://twitter.com/lobbyboxer" class="pure-menu-link">Twitter </a>|</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!--end splash -->
+
+        <div class="lb-player">
+            <div class="song-info">
+                <h1 id="song-title" class="song-title">Song Title Goes In This Space </h1>
+            </div>
+
+            <div class="song-nav">
+                <div class="playback-controls">
+                    <button class="nav-button" type="button" id="nav-back"><img src="../img/back-icon.png" /></button>
+                    <button class="nav-button" type="button" id="nav-play"><img src="../img/play-icon.png" /></button>
+                    <button class="nav-button" type="button" id="nav-next"><img src="../img/next-icon.png"/></button>
+                </div>
+            </div>
+
+            <div class="song-selector">
+                <div class = "albums">
+                    <div class="lb-album-cover ">
+                        <img class="album-cover-image" src="../img/album.jpeg"/>
+                        <span>New Album Title</span>
+                    </div>
+
+                    <div class="lb-album-cover ">
+                        <img class="album-cover-image" src="../img/LobbyBoxercover.jpg"/>
+                        <span>Lobby Boxer</span>
+                    </div>
+
+
+                    <div class="lb-album-cover ">
+                        <img class="album-cover-image" src="../img/TeddyCover.jpg"/>
+                        <span>Teddy</span>
+                    </div>
+                </div>
+            </div>
+
+            <script src="../js/album.js" charset="utf-8"></script>
+            <script src="../js/audio.js" charset="utf-8"></script>
+        </div>
+        <!-- end player -->
     </body>
 </html>

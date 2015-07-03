@@ -1,12 +1,92 @@
 body, html{
     height: 100%;
     margin: 0;
+    font-family: sans-serif;
+    color: rgb(152, 27, 27);
 }
 
 
-iframe{
+.lb-splash{
+    height: 90%;
+    width: 100%;
+    background-color: rgb(142, 197, 235);
+}
+
+.lb-player{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(240, 242, 144);
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
     margin: 0;
-    padding: 0;
+}
+
+.lb-title{
+    width: 100%;
+    text-align: center;
+    font-size: 10em;
+    margin: 0;
+}
+
+.lb-nav{
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    color: rgb(240, 242, 144);
+    min-width: 841px;
+}
+
+.lb-nav a {
+    color: rgb(240, 242, 144);
+    transition: margin 1s;
+}
+
+.lb-nav a:hover{
+    margin: 0 40px 0 40px;
+    color: rgb(152, 27, 27);
+}
+
+li{
+    display: inline;
+}
+
+a{
+    text-decoration: none;
+}
+
+.song-info{
+    min-width: 30%;
+}
+
+.lb-album-cover{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.album-cover-image{
+    width: 50px;
+    height: 50px;
+}
+
+.song-selector{
+    width: 30%;
+
+}
+
+.nav-button{
+    width: 50px;
+    height: 50px;
     border: 0;
-    display: block;
+    background-color: rgb(152, 27, 27);
+    border-radius: 3px;
+}
+
+.nav-button:focus{
+    border: 0;
 }
