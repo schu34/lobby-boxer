@@ -77,6 +77,7 @@ var playQueue = {
         this.song = new Audio();
         this.currentPositionInQueue = -1;
         this.queue = [];
+        this.label.innerText = "";
     }
 };
 

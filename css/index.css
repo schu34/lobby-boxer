@@ -37,6 +37,7 @@ h1{
     text-align: center;
     font-size: 2.5em;
     color: rgb(240, 242, 144);
+    min-width: 841px;
 }
 
 .lb-nav a {
