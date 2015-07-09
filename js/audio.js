@@ -14,7 +14,7 @@ var pause = function(){
 
 var playQueue = {
     queue: [],
-    currentPositionInQueue:-1,
+    currentPositionInQueue: -1,
     song: new Audio(),
     label: {},
     playFirst: function(){
@@ -22,22 +22,15 @@ var playQueue = {
     },
     loadSong: function(queuePos){
         this.currentPositionInQueue = queuePos;
-        var tempSong = new Audio();
-        tempSong.src = "../audio/" + this.queue[queuePos] + ".mp3";
-        tempSong.controls = false;
-        tempSong.autoplay = false;
-        this.song = tempSong;
+        this.song.src = "../audio/" + this.queue[queuePos] + ".mp3";
 
-        //var titleNode  = document.getElementById('song-title');
         this.label.innerText = this.queue[queuePos];
     },
     playSong: function(queuePos){
 
         if(queuePos >= 0 && queuePos < this.queue.length){
-
             this.loadSong(queuePos);
-            var source = ctx.createMediaElementSource(this.song);
-            source.connect(ctx.destination);
+            this.song.currentTime = 0;
             this.song.play();
         } else {
             this.reset();
@@ -65,16 +58,17 @@ var playQueue = {
     playPrev: function(){
         var prevNum = this.currentPositionInQueue - 1;
 
-        if(song.currentTime < 2){
+        if(this.song.currentTime > 2){
             this.song.currentTime = 0;
-        } else if(prevNum === 0 || nextNum > this.queue.length){
+        } else if(prevNum < 0){
+            this.song.pause();
             this.reset();
         } else {
-            this.playSong(nextNum);
+            this.playSong(prevNum);
         }
     },
     reset: function(){
-        this.song = new Audio();
+        this.song.pause();
         this.currentPositionInQueue = -1;
         this.queue = [];
         this.label.innerText = "";
@@ -93,5 +87,10 @@ window.onload = function(){
     document.getElementById('nav-back').onclick = function(){playQueue.playPrev();};
 
     playQueue.label = document.getElementById('song-title');
+    playQueue.song.controls = false;
+    playQueue.song.autoplay = false;
+    var source = ctx.createMediaElementSource(playQueue.song);
+    source.connect(ctx.destination);
+
 
 };
