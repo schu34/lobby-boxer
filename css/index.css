@@ -3,6 +3,7 @@ body, html{
     margin: 0;
     font-family: sans-serif;
     color: rgb(152, 27, 27);
+    overflow: hidden;
 }
 
 
@@ -66,7 +67,8 @@ a{
     display: inline-block;
     width: 50px;
     height: 50px;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    position: relative;
 }
 
 .album-cover-image{
@@ -87,6 +89,54 @@ a{
     border-radius: 3px;
 }
 
+
+
 .nav-button:focus{
     border: 0;
+}
+
+/*.lb-album-info-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}*/
+
+.lb-album-cover:hover .lb-album-info{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lb-album-info{
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    pointer-events: none;
+}
+
+.lb-album-info-table{
+    font-size: 1.5em;
+    background-color: rgb(152, 27, 27);
+    color: rgb(142, 197, 235);
+    width: 300px;
+    height: 450px;
+    border-collapse: collapse;
+}
+
+.lb-album-info-title{
+    text-align: center;
+}
+
+.lb-album-info-row{
+    border: 1px solid rgb(240, 242, 144);
+}
+
+.lb-album-info-cell:hover{
+    background-color: rgb(102, 27, 27);
+}
+
+.table-play-button{
+    float: right;
+    vertical-align: middle;
 }

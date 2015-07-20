@@ -26,6 +26,14 @@ var playQueue = {
 
         this.label.innerText = this.queue[queuePos];
     },
+    loadSongWithTitle: function(title){
+        this.queue[0] = title;
+    },
+    playSongWithTitle: function(title) {
+        this.reset();
+        this.loadSongWithTitle(title);
+        this.playFirst();
+    },
     playSong: function(queuePos){
 
         if(queuePos >= 0 && queuePos < this.queue.length){
