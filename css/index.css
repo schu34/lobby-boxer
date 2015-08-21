@@ -6,20 +6,36 @@ body, html{
     overflow: hidden;
 }
 
+@media screen and (max-width: 900px) {
+    .lb-player{
+        opacity: 0;
+    }
+}
+
 
 .lb-splash{
-    height: 90%;
+    height: 100%;
     width: 100%;
     background-color: rgb(142, 197, 235);
+    overflow-x: hidden;
+}
+
+.container-1{
+    height: 100%;
 }
 
 .lb-player{
     height: 10%;
+    min-height: 50px;
     width: 100%;
     background-color: rgb(240, 242, 144);
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    transition: all .2s;
+    z-index: 999;
 }
 
 h1{
@@ -38,7 +54,7 @@ h1{
     text-align: center;
     font-size: 2.5em;
     color: rgb(240, 242, 144);
-    min-width: 841px;
+    min-width: 921px;
 }
 
 .lb-nav a {
@@ -139,4 +155,39 @@ a{
 .table-play-button{
     float: right;
     vertical-align: middle;
+}
+
+
+.lb-shows{
+    width: 100%;
+    background-color: rgb(152, 27, 27);
+    height: 100%;
+    position: relative;
+}
+.lb-show-table{
+    width: 95%;
+    height: 50%;
+    font-size: 1.5em;
+    background-color: rgb(142, 197, 235);
+    margin: 0 auto;
+}
+
+.show-table-container{
+    position: absolute;
+    margin: auto;
+    top: 25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+
+}
+
+th, td{
+    border: 2px solid rgb(152, 27, 27);
+}
+
+table{
+    border-collapse: collapse;
 }
