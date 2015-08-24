@@ -184,6 +184,13 @@ a{
 
 }
 
+.show-title{
+    color: rgb(142, 197, 235);
+    text-align: center;
+    padding-top: 50px;
+    font-size: 5em;
+}
+
 th, td{
     border: 2px solid rgb(152, 27, 27);
 }
