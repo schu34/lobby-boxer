@@ -1,21 +1,3 @@
-var ctx = new AudioContext();
-
-var currentSongTitle;
-
-var playing = false;
-
-var play = function(){
-    currentSong.play();
-};
-
-var pause = function(){
-    currentSong.pause();
-};
-
-
-
-
-
 window.onload = function(){
     //array of image html elements. each represents an album cover
     var imgs = [];
@@ -35,8 +17,20 @@ window.onload = function(){
     //set audio element options
     playQueue.song.controls = false;
     playQueue.song.autoplay = false;
-    var source = ctx.createMediaElementSource(playQueue.song);
-    source.connect(ctx.destination);
+    // var source = ctx.createMediaElementSource(playQueue.song);
+    // source.connect(ctx.destination);
 
+
+    //SOMTHING NEEDS TO CHANGE HERE SINCE THIS HAS NOTHING TO DO WITH AUDIO
+    loadScrollHandlers();
+    // window.onscroll = function(){
+    //
+    //     console.log("scroll event detected");
+    //     if(window.scrollY > 300){
+    //         document.getElementById("nav").className = "lb-nav-sticky";
+    //     } else {
+    //         document.getElementById("nav").className = "lb-nav";
+    //     }
+    // };
 
 };

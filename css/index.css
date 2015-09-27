@@ -3,9 +3,12 @@ body, html{
     margin: 0;
     font-family: sans-serif;
     color: rgb(152, 27, 27);
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
+.lb-merch{
+    background-color: rgb(142, 197, 235);
+}
 @media screen and (max-width: 900px) {
     .lb-player{
         opacity: 0;
@@ -17,7 +20,7 @@ body, html{
     height: 100%;
     width: 100%;
     background-color: rgb(142, 197, 235);
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 .container-1{
@@ -55,7 +58,42 @@ h1{
     font-size: 2.5em;
     color: rgb(240, 242, 144);
     min-width: 921px;
+    transition: all .2s, background-color 1ms;
 }
+
+.lb-nav-sticky{
+    position: fixed;
+    top: 0;
+    right: 50px;
+    z-index: 999;
+    color: rgb(152, 27, 27);
+    transition: all .2s, background-color 1s;
+    font-size: 2.5em;
+    /*width: 100%;*/
+    text-align: right;
+    background-color: rgb(240, 242, 144);
+    opacity: .9;
+}
+
+.lb-nav-sticky::before{
+    content: "LOBBY BOXER";
+    position:absolute;
+    height: 100%;
+    right: 100%;
+    background-color: rgb(240, 242, 144);
+    padding-left: 40px;
+}
+
+.lb-nav-sticky a {
+    color: rgb(152, 27, 27);
+    transition: margin 1s;
+}
+
+.lb-nav-sticky a:hover{
+    margin: 0 40px 0 40px;
+    color: rgb(142, 197, 235);
+}
+
 
 .lb-nav a {
     color: rgb(240, 242, 144);
@@ -163,6 +201,7 @@ a{
     background-color: rgb(152, 27, 27);
     height: 100%;
     position: relative;
+    border-top: 10px rgb(95, 131, 156);
 }
 .lb-show-table{
     width: 95%;
@@ -170,6 +209,8 @@ a{
     font-size: 1.5em;
     background-color: rgb(142, 197, 235);
     margin: 0 auto;
+
+
 }
 
 .show-table-container{
@@ -184,11 +225,28 @@ a{
 
 }
 
-.show-title{
-    color: rgb(142, 197, 235);
-    text-align: center;
+.section-title{
+    padding-left: 15px;
     padding-top: 50px;
     font-size: 5em;
+}
+
+.show-title{
+    color: rgb(142, 197, 235);
+}
+
+.lb-merch{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.lb-news{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(152, 27, 27);
+
 }
 
 th, td{
