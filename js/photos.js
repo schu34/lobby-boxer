@@ -1,6 +1,4 @@
-window.onload = function(){
-    getPhotoAlbums();
-};
+window.addEventListener("load", getPhotoAlbums);
 
 function getPhotoAlbums(){
 
@@ -28,7 +26,7 @@ function populatePage(data){
 
     console.log(data);
 
-    var container = document.getElementById('album-container')
+    var container = document.getElementById('album-container');
 
     data.forEach(function(picture){
         if(picture.name !== "Cover Photos"){
@@ -37,12 +35,14 @@ function populatePage(data){
             var div = document.createElement("div");
             div.className = "lb-photo-album";
 
-            var img = new Image(200,200);
+            var img = new Image();
             img.src = picture.url;
+            img.className = "album-thumbnail";
 
             div.appendChild(img);
 
             container.appendChild(div);
+
         }
 
     });

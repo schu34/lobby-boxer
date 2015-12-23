@@ -49,7 +49,7 @@ function getPhotoURLs(albums, callback){
                 //console.log(bodyObj);
                 pictureURLs[i] = {url:bodyObj.images[0].source, name: album.name};
 
-                if(completedRequests === albums.length){ //make sure all 
+                if(completedRequests === albums.length){ //make sure we have all photos before sending response
                     callback(pictureURLs);
                 }
             }

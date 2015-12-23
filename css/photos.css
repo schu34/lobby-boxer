@@ -1,14 +1,20 @@
 .lb-photo-album{
-    background-color: #000000;
+    background-color: rgb(142, 197, 235);
     height: 200px;
     width: 200px;
-    float:left;
-    margin: 10px;
+    margin: 20px 10px;
 
-    border: 25px solid rgb(152, 27, 27);
-    border-radius: 5px;
+    /*border: 25px solid rgb(152, 27, 27);
+    border-radius: 5px;*/
+    overflow: hidden;
+    display: inline-block;
+
 }
-
+.album-thumbnail{
+    display: block;
+    height: auto;
+    width: 100%;
+}
 
 .lb-album-title{
     font-size: 5em;
@@ -17,8 +23,19 @@
 
 .lb-album-container{
     width: 80%;
-    margin: 0 auto;
-    padding-top: 10px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow-x: scroll;
+    /*max-height: 270px;*/
+    white-space: nowrap;
+    background-color: rgb(142, 197, 235);
+    border-radius: 5px;
+}
+
+.lb-album-container::-webkit-scrollbar{
+    display: none;
 }
 
 html{

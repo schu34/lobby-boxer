@@ -3,6 +3,7 @@ body, html{
     margin: 0;
     font-family: sans-serif;
     color: rgb(152, 27, 27);
+    overflow-x: hidden;
 }
 
 .lb-merch{
@@ -151,7 +152,9 @@ a{
     border-radius: 3px;
 }
 
-
+.nav{
+    white-space: nowrap;
+}
 
 .nav-button:focus{
     border: 0;

@@ -1,4 +1,4 @@
-window.onload = function(){
+window.addEventListener("load", function(){
     //array of image html elements. each represents an album cover
     var imgs = [];
     imgs = document.getElementsByClassName('album-cover-image');
@@ -22,8 +22,6 @@ window.onload = function(){
 
     //SOMTHING NEEDS TO CHANGE HERE SINCE THIS HAS NOTHING TO DO WITH AUDIO
     loadScrollHandlers();
-    if(window.scrollY > 230){
-        navBar.className = "lb-nav-sticky";
-    }
 
-};
+
+});
