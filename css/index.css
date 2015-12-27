@@ -51,7 +51,7 @@ h1{
     margin: 0;
 }
 
-.lb-nav{
+.lb-navbar{
     width: 100%;
     text-align: center;
     font-size: 2.5em;
@@ -105,12 +105,12 @@ ul{
 }
 
 
-.lb-nav a {
+.lb-navbar a {
     color: rgb(240, 242, 144);
     transition: margin 1s;
 }
 
-.lb-nav a:hover{
+.lb-navbar a:hover{
     margin: 0 40px 0 40px;
     color: rgb(152, 27, 27);
 }

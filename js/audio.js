@@ -21,7 +21,7 @@ window.addEventListener("load", function(){
 
 
     //SOMTHING NEEDS TO CHANGE HERE SINCE THIS HAS NOTHING TO DO WITH AUDIO
-    loadScrollHandlers();
+    //loadScrollHandlers();
 
 
 });

@@ -1,7 +1,9 @@
 .lb-photo-album{
     background-color: rgb(142, 197, 235);
-    height: 200px;
-    width: 200px;
+    height: 50vh;
+    width: 50vh;
+
+    max-height: 60vw;
     margin: 20px 10px;
 
     /*border: 25px solid rgb(152, 27, 27);
@@ -10,10 +12,18 @@
     display: inline-block;
 
 }
+
+.lb-photo-album:first-child{
+    margin-left: 20px;
+}
+
 .album-thumbnail{
     display: block;
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
+
+
+    margin: auto;
 }
 
 .lb-album-title{
@@ -33,6 +43,7 @@
     background-color: rgb(142, 197, 235);
     border-radius: 5px;
 }
+
 
 .lb-album-container::-webkit-scrollbar{
     display: none;
