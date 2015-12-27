@@ -36,6 +36,6 @@ app.get('/photos', function(req, res){
 
 });
 
-http.createServer(app).listen(5000);
+http.createServer(app).listen(process.env.PORT || 5000);
 
 console.log("listening on port 5000");
