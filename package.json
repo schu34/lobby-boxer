@@ -1,4 +1,7 @@
 {
+    "engines": {
+      "node": "0.12.7"
+    },
   "name": "lobby-boxer-website",
   "version": "0.0.1",
   "description": "Lobby Boxer Website",
