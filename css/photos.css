@@ -38,6 +38,7 @@
     transform: translate(-50%, -50%);
 
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     /*max-height: 270px;*/
     white-space: nowrap;
     background-color: rgb(142, 197, 235);
