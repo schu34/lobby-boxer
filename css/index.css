@@ -7,6 +7,10 @@ body, html{
     -webkit-overflow-scrolling: touch;
 }
 
+.lb-section{
+    min-height: 600px;
+}
+
 .lb-merch{
     background-color: rgb(142, 197, 235);
 }
