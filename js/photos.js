@@ -9,7 +9,7 @@ function getPhotoAlbums(){
             //console.log(xhttp.responseText);
             var data = JSON.parse(xhttp.responseText);
             console.log(data);
-            populatePage(data.data);
+            addPhotos(data.data);
         }
     };
 
@@ -21,7 +21,7 @@ function getPhotoAlbums(){
 }
 
 
-function populatePage(data){
+function addPhotos(data){
 
 
     console.log(data);
@@ -38,11 +38,12 @@ function populatePage(data){
 
         for(var i = 0; i < photo.images.length; i++){
             var diff = photo.images[i].height - 300;
+            //get thumbnail size image
             if (diff < minDiff && diff > 0){
                 minDiff = diff;
                 minDiffIndex = i;
             }
-
+            //get biggest image
             if(photo.images[i].height > biggest){
                 biggest = photo.images[i].height;
                 biggestIndex = i;
@@ -51,6 +52,8 @@ function populatePage(data){
 
         picture = photo.images[minDiffIndex];
 
+
+        //create image wrapped in link
         var a = document.createElement('a');
 
         a.href = photo.images[biggestIndex].source;
