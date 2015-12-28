@@ -110,7 +110,7 @@ ul{
 }
 
 
-.lb-navbar a {
+a {
     color: rgb(240, 242, 144);
     transition: margin 1s;
 }
