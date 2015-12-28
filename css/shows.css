@@ -1,0 +1,31 @@
+.show-container{
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    /*max-height: 270px;*/
+    white-space: nowrap;
+    background-color: rgb(142, 197, 235);
+    border-radius: 5px;
+}
+.show-container::-webkit-scrollbar{
+    display: none;
+}
+
+.show{
+    background-color: rgb(142, 197, 235);
+    height: 50vh;
+    width: 50vh;
+
+    max-height: 60vw;
+    margin: 20px 10px;
+
+    /*border: 25px solid rgb(152, 27, 27);
+    border-radius: 5px;*/
+    overflow: hidden;
+    display: inline-block;
+}
