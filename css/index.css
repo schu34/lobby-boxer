@@ -61,7 +61,7 @@ h1{
     font-size: 2.5em;
     color: rgb(240, 242, 144);
     min-width: 921px;
-    transition: all .2s, background-color 1ms;
+    transition: all .2s, background-color 1ms, color 1ms;
 }
 
 ul{
@@ -71,32 +71,18 @@ ul{
 .lb-nav-sticky{
     position: fixed;
     top: 0;
-    right: 50px;
+    right: 0;
     z-index: 999;
     color: rgb(152, 27, 27);
-    transition: all .2s, background-color 1ms;
+    transition: all .2s, background-color 1ms, color 1ms;
     font-size: 2.5em;
-    /*width: 100%;*/
-    text-align: right;
+    width: 100%;
+    text-align: center;
     background-color: rgb(240, 242, 144);
     opacity: .9;
     height: 50px;
 }
 
-.lb-nav-sticky::before{
-    content: "LOBBY BOXER";
-    position:absolute;
-    height: 100%;
-    right: 100%;
-    width:100px;
-    background-color: rgb(240, 242, 144);
-    padding-right: 190px;
-    padding-left: 30px;
-    vertical-align: middle;
-    white-space: nowrap;
-    font-weight: bolder;
-
-}
 
 .lb-nav-sticky a {
     color: rgb(152, 27, 27);
