@@ -1,6 +1,9 @@
 window.addEventListener("load", function(){loadScrollHandlers();});
 
-window.onscroll =  function(){
+
+var scroll = function(){
+    var navBar = document.getElementById('nav');
+
     console.log("scroll event detected");
     if(window.scrollY > 230){
         navBar.className = "lb-nav-sticky";
@@ -16,6 +19,7 @@ var loadScrollHandlers = function(){
     if(window.scrollY > 230){
         navBar.className = "lb-nav-sticky";
     }
+    document.onscroll =  scroll;
 
 
     console.log("scroll handler loaded");

@@ -3,7 +3,6 @@ body, html{
     margin: 0;
     font-family: sans-serif;
     color: rgb(152, 27, 27);
-    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
