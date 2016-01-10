@@ -13,6 +13,7 @@ body, html{
 .lb-merch{
     background-color: rgb(142, 197, 235);
 }
+
 @media screen and (max-width: 900px) {
     .lb-player{
         opacity: 0;
@@ -140,6 +141,7 @@ a{
     border: 0;
     background-color: rgb(152, 27, 27);
     border-radius: 3px;
+    padding: 5px;
 }
 
 .nav{
@@ -251,4 +253,12 @@ th, td{
 
 table{
     border-collapse: collapse;
+}
+
+progress{
+    position: fixed;
+    top: 89%;
+    left: 0;
+
+    width: 100%;
 }

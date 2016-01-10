@@ -18,10 +18,4 @@ window.addEventListener("load", function(){
     playQueue.song.controls = false;
     playQueue.song.autoplay = false;
 
-
-
-    //SOMTHING NEEDS TO CHANGE HERE SINCE THIS HAS NOTHING TO DO WITH AUDIO
-    //loadScrollHandlers();
-
-
 });

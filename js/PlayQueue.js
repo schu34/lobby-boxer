@@ -3,6 +3,7 @@ var playQueue = {
     currentPositionInQueue: -1,
     song: new Audio(),
     label: {},
+    playButton: {},
     playFirst: function(){
         this.playSong(0);
     },
@@ -25,6 +26,7 @@ var playQueue = {
         if(queuePos >= 0 && queuePos < this.queue.length){
             this.loadSong(queuePos);
             this.song.currentTime = 0;
+            drawPauseButton();
             this.song.play();
         } else {
             this.reset();
@@ -36,10 +38,14 @@ var playQueue = {
         this.playFirst();
     },
     pause: function(){
-        if(this.song.paused)
+        if(this.song.paused){
+            drawPauseButton()
             this.song.play();
-        else
+        }
+        else{
+            drawPlayButton();
             this.song.pause();
+        }
     },
     playNext: function(){
         var nextNum = this.currentPositionInQueue + 1;
@@ -55,7 +61,6 @@ var playQueue = {
         if(this.song.currentTime > 2){
             this.song.currentTime = 0;
         } else if(prevNum < 0){
-            this.song.pause();
             this.reset();
         } else {
             this.playSong(prevNum);
@@ -66,5 +71,6 @@ var playQueue = {
         this.currentPositionInQueue = -1;
         this.queue = [];
         this.label.innerText = "";
+        drawPlayButton();
     }
 };
