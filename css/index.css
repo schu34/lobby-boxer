@@ -69,11 +69,11 @@ h1{
     color: rgb(240, 242, 144);
     min-width: 921px;
     transition: all .2s, background-color 1ms, color 1ms;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
 }
 
-ul{
-    margin: 0;
-}
+
 
 .lb-nav-sticky{
     position: fixed;
@@ -88,8 +88,13 @@ ul{
     background-color: rgb(240, 242, 144);
     opacity: .9;
     height: 50px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
 }
 
+ul{
+    margin: 0;
+}
 
 .lb-nav-sticky a {
     color: rgb(152, 27, 27);
@@ -232,6 +237,7 @@ a{
     padding-left: 15px;
     padding-top: 50px;
     font-size: 5em;
+    font-family: 'Roboto', sans-serif;
 }
 
 .show-title{
