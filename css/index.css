@@ -6,6 +6,10 @@ body, html{
     -webkit-overflow-scrolling: touch;
 }
 
+::selection{
+    background: black;
+}
+
 .lb-section{
     min-height: 600px;
 }
@@ -141,7 +145,6 @@ a{
     border: 0;
     background-color: rgb(152, 27, 27);
     border-radius: 3px;
-    padding: 5px;
 }
 
 .nav{
