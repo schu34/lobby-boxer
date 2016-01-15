@@ -58,6 +58,7 @@ function addPhotos(data){
 
         a.href = photo.images[biggestIndex].source;
         a.setAttribute("data-lightbox", "photos");
+        a.className = "photo-album-link";
 
         var div = document.createElement("div");
         div.className = "lb-photo-album";

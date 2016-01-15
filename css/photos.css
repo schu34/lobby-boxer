@@ -13,9 +13,14 @@
 
 }
 
-.lb-photo-album:first-child{
-    margin-left: 20px;
+.photo-album-link:first-child{
+    margin-left: 10px;
 }
+
+.photo-album-link:last-child{
+    margin-right: 10px;
+}
+
 
 .album-thumbnail{
     display: block;
