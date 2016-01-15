@@ -6,13 +6,13 @@ window.addEventListener("load", function(){
     drawPrevButton();
 });
 
-window.addEventListener("")
+window.addEventListener(""); //TODO
 
 function scroll() {
     var navBar = document.getElementById('nav');
 
     console.log("scroll event detected");
-    if(window.scrollY > 230){
+    if(window.scrollY > 260){
         navBar.className = "lb-nav-sticky";
     } else {
         navBar.className = "lb-navbar";
@@ -23,7 +23,7 @@ function scroll() {
 function loadScrollHandlers(){
     var navBar = document.getElementById('nav');
     //if the user loads the page already scrolled down
-    if(window.scrollY > 230){
+    if(window.scrollY > 260){
         navBar.className = "lb-nav-sticky";
     }
     document.onscroll =  scroll;
@@ -99,4 +99,18 @@ function drawPrevButton() {
     svg.appendChild(path);
 
     document.getElementById("nav-back").appendChild(svg);
+}
+
+function drawDownArrow(node){
+    var svg = document.createElementNS(xmlns, "svg");
+    svg.setAttribute("width", "100");
+    svg.setAttribute("height", "50");
+
+    var path = document.createElementNS(xmlns, "path");
+    path.setAttribute("d", "M 50 50 L 0 0 L 10 0 L 50 40 L 90 0 L 100 0");
+    path.setAttribute("fill", "rgb(142, 197, 235)");
+
+    svg.appendChild(path);
+
+    node.appendChild(svg);
 }
