@@ -12,7 +12,7 @@ function scroll() {
     var navBar = document.getElementById('nav');
 
     console.log("scroll event detected");
-    if(window.scrollY > 230){
+    if(window.scrollY > 260){
         navBar.className = "lb-nav-sticky";
     } else {
         navBar.className = "lb-navbar";
@@ -23,7 +23,7 @@ function scroll() {
 function loadScrollHandlers(){
     var navBar = document.getElementById('nav');
     //if the user loads the page already scrolled down
-    if(window.scrollY > 230){
+    if(window.scrollY > 260){
         navBar.className = "lb-nav-sticky";
     }
     document.onscroll =  scroll;
