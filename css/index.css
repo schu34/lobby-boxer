@@ -183,16 +183,21 @@ a{
     background-color: rgb(152, 27, 27);
     color: rgb(142, 197, 235);
     width: 300px;
-    height: 450px;
+    /*height: 450px;*/
     border-collapse: collapse;
+    /*border-bottom: 2px solid rgb(240, 242, 144);*/
+
 }
 
 .lb-album-info-title{
     text-align: center;
+    border-bottom: 3px solid rgb(240, 242, 144);
 }
 
-.lb-album-info-row{
-    border: 1px solid rgb(240, 242, 144);
+.lb-album-info-cell{
+    border-bottom: 2px solid rgb(240, 242, 144);
+    height: 60px;
+
 }
 
 .lb-album-info-cell:hover{
@@ -258,9 +263,9 @@ a{
 
 }
 
-th, td{
+/*th, td{
     border: 2px solid rgb(152, 27, 27);
-}
+}*/
 
 table{
     border-collapse: collapse;
