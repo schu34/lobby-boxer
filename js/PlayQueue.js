@@ -36,10 +36,14 @@ var playQueue = {
         this.reset();
         this.queue = album.tracklist;
         this.playFirst();
+        var t = this;
+        this.song.onended = function(){
+            t.playNext();
+        };
     },
     pause: function(){
         if(this.song.paused){
-            drawPauseButton()
+            drawPauseButton();
             this.song.play();
         }
         else{
