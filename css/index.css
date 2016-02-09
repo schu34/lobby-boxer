@@ -165,8 +165,9 @@ a{
 
 
 .lb-album-cover:hover .lb-album-info{
-    opacity: 1;
+    opacity: .9;
     pointer-events: all;
+    mix-blend-mode: multiply;
 }
 
 .lb-album-info{
@@ -192,13 +193,13 @@ a{
 .lb-album-info-title{
     text-align: center;
     border: 3px solid rgb(240, 242, 144);
-    
+
 }
 
 .lb-album-info-cell{
     border-bottom: 2px solid rgb(240, 242, 144);
-    border-left: 3px solid rgb(240, 242, 144);
-    border-right: 3px solid rgb(240, 242, 144);
+    border-left: 3px solid   rgb(240, 242, 144);
+    border-right: 3px solid  rgb(240, 242, 144);
     height: 60px;
 
 }
