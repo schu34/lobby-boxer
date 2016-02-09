@@ -22,4 +22,4 @@ var bigBucksTracks = ["Landlocked", "Shine Like Fire", "Sheriff", "Lover's Lane"
                       "Gaslamp", "I Was Afraid Of Tornados", "Leslie",
                       "Come Back", "Christopher and Julius", "Where I'll Be next year"];
 
-new Album("Big Bucks", 10, bigBucksTracks);
+var bigBucks = new Album("Big Bucks", 10, bigBucksTracks);

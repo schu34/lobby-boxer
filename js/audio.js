@@ -1,7 +1,10 @@
 window.addEventListener("load", function(){
     //array of image html elements. each represents an album cover
     var imgs = document.getElementsByClassName('album-cover-image');
-    imgs[0].onclick = function(){playQueue.playAlbum(lobbyBoxerEP);};
+    imgs[0].onclick = function(){playQueue.playAlbum(bigBucks);};
+    imgs[1].onclick = function(){playQueue.playAlbum(lobbyBoxerEP);};
+    imgs[2].onclick = function(){playQueue.playAlbum(Teddy);};
+
 
     var infoRows = document.getElementsByClassName("lb-album-info-row");
 
