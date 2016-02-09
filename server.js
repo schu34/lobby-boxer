@@ -14,7 +14,7 @@ var accessKey = '?access_token='+ FBid + '|' + FBSecret;
 var FBCoverPhotoReq = "&fields=cover_photo,name";
 var FBlinkReq = "&fields=images";
 var FBPhotosUrl = FBRootUrl + "/lobbyboxerstl/photos";
-var FBtagged = "&type=tagged";
+var FBtagged = "&type=uploaded";
 
 app.use(express.static(__dirname));
 
