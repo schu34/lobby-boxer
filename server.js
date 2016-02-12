@@ -13,13 +13,17 @@ var FBRootUrl = 'https://graph.facebook.com/v2.5/';
 var accessKey = '?access_token='+ FBid + '|' + FBSecret;
 var FBCoverPhotoReq = "&fields=cover_photo,name";
 var FBlinkReq = "&fields=images";
-var FBPhotosUrl = FBRootUrl + "/lobbyboxerstl/photos";
+var FBPhotosUrl = FBRootUrl + "/1264750496873466/photos";
 var FBtagged = "&type=uploaded";
 
 app.use(express.static(__dirname));
 
+// function getAlbumList(){
+//     var url =
+// }
+
 function getPhotoList(callback){
-    url = FBPhotosUrl + accessKey + FBlinkReq + FBtagged;
+    var url = FBPhotosUrl + accessKey + FBlinkReq; //+ FBtagged;
     request(url, function(error, res, body){
         if(error){
             console.log(error);
