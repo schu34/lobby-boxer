@@ -18,9 +18,6 @@ var FBtagged = "&type=uploaded";
 
 app.use(express.static(__dirname));
 
-// function getAlbumList(){
-//     var url =
-// }
 
 function getPhotoList(callback){
     var url = FBPhotosUrl + accessKey + FBlinkReq; //+ FBtagged;
