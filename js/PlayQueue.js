@@ -47,7 +47,7 @@ var playQueue = {
             this.song.play();
         }
         else{
-            drawPlayButton();
+            drawPlayButton(document.getElementById('nav-play'));
             this.song.pause();
         }
     },
@@ -74,7 +74,7 @@ var playQueue = {
         this.song.pause();
         this.currentPositionInQueue = -1;
         this.queue = [];
-        this.label.innerText = "";
-        drawPlayButton();
+        this.label.innerText = "Click an album to listen";
+        drawPlayButton(document.getElementById('nav-play'));
     }
 };

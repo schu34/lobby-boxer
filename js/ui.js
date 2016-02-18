@@ -1,12 +1,65 @@
 var xmlns = "http://www.w3.org/2000/svg";
 window.addEventListener("load", function(){
     loadScrollHandlers();
-    drawPlayButton();
+    drawPlayButton(document.getElementById("nav-play"));
     drawNextButton();
     drawPrevButton();
+    var covers = document.getElementsByClassName('album-cover-image');
+    covers[0].onclick = function(e){
+                                    hideAlbumTables();
+                                    showAlbumTable("big-bucks");
+                                    e.stopPropagation();
+                                };
+    covers[1].onclick = function(e){
+                                    hideAlbumTables();
+                                    showAlbumTable("lobby-boxer");
+                                    e.stopPropagation();
+                                };
+    covers[2].onclick = function(e){
+                                    hideAlbumTables();
+                                    showAlbumTable("teddy");
+                                    e.stopPropagation();
+                                };
+
+    document.body.onclick = hideAlbumTables;
+
+    var albumPlayButtons = document.getElementsByClassName('album-play-button');
+
+    for (var i = 0; i < albumPlayButtons.length; i++) {
+        drawPlayButton(albumPlayButtons[i]);
+        albumPlayButtons[i].onclick = function(){
+            var album = this.parentNode.innerText;
+            if(album === "Big Bucks"){
+                playQueue.playAlbum(bigBucks);
+            } else if(album === "Teddy"){
+                playQueue.playAlbum(teddy);
+            } else{
+                playQueue.playAlbum(lobbyBoxerEP);
+            }
+        };
+    }
+
 });
 
 window.addEventListener(""); //TODO
+
+function showAlbumTable(album){
+    document.getElementById(album).className = "lb-album-info fade-in";
+}
+
+function hideAlbumTable(album){
+    document.getElementById(album).className = "lb-album-info fade-out";
+}
+
+function hideAlbumTables(){
+    hideAlbumTable("big-bucks");
+    hideAlbumTable("lobby-boxer");
+    hideAlbumTable("teddy");
+}
+
+function isVisable(albumTable){
+    return albumTable.className === "lb-album-info fadeout";
+}
 
 function scroll() {
     var navBar = document.getElementById('nav');
@@ -32,11 +85,10 @@ function loadScrollHandlers(){
     console.log("scroll handler loaded");
 }
 
-function drawPlayButton(){
-    var button = document.getElementById("nav-play");
-    var p = document.getElementById('play-path');
-    if(p){
-        button.removeChild(p);
+function drawPlayButton(node){
+    //var button = document.getElementById("nav-play");
+    if(node.firstChild){
+        node.removeChild(node.firstChild);
     }
 
     var svg = document.createElementNS(xmlns, "svg");
@@ -45,11 +97,11 @@ function drawPlayButton(){
     svg.setAttribute("id", "play-path");
     var polygon = document.createElementNS(xmlns, "polygon");
     polygon.setAttribute("points", "0,0 0,20 20,10");
-    polygon.setAttribute("fill", "rgb(142, 197, 235)");
+    polygon.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(polygon);
 
-    button.appendChild(svg);
+    node.appendChild(svg);
 
 }
 
@@ -64,7 +116,7 @@ function drawPauseButton(){
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M0,0 L0,20 L5,20 L5,0 L0,0 M10,0 L10,20 L15,20 L15,0, L10,0");
-    path.setAttribute("fill", "rgb(142, 197, 235)");
+    path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
 
@@ -79,7 +131,7 @@ function drawNextButton(){
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 0 0 L 0 20 L 17.5 10 z M 20 0 L 17.5 0 L 17.5 20 L 20 20 z");
-    path.setAttribute("fill", "rgb(142, 197, 235)");
+    path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
 
@@ -94,7 +146,7 @@ function drawPrevButton() {
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 20 0 L 20 20 L 2.5 10 z M 0 0 L 2.5 0 L 2.5 20 L 0 20 z");
-    path.setAttribute("fill", "rgb(142, 197, 235)");
+    path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
 
@@ -108,7 +160,7 @@ function drawDownArrow(node){
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 50 50 L 0 0 L 10 0 L 50 40 L 90 0 L 100 0");
-    path.setAttribute("fill", "rgb(142, 197, 235)");
+    path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
 
