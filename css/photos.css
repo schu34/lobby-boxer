@@ -60,8 +60,9 @@
 }
 
 
-.lb-album-container::-webkit-scrollbar{
-    display: none;
+.lb-album-container::-webkit-scrollbar-track-piece{
+    background-color: rgb(142, 197, 235);
+    /*display: none;*/
 }
 
 html{
