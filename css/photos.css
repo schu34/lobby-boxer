@@ -6,8 +6,8 @@
     max-height: 60vw;
     margin: 20px 10px;
 
-    /*border: 25px solid rgb(152, 27, 27);
-    border-radius: 5px;*/
+    border: 2px solid rgb(240, 242, 144);
+    border-radius: 5px;
     overflow: hidden;
     display: inline-block;
 
@@ -22,12 +22,20 @@
 }
 
 
-.album-thumbnail{
+.album-thumbnail-horizontal{
     display: block;
     height: 100%;
     width: auto;
 
 
+    margin: auto;
+    /*border: 2px solid rgb(240, 242, 144)*/
+}
+
+.album-thumbnail-vertical{
+    display: block;
+    width: 100%;
+    height: auto;
     margin: auto;
 }
 

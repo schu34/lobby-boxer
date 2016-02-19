@@ -65,7 +65,7 @@ function addPhotos(data){
 
         var img = new Image();
         img.src = picture.source;
-        img.className = "album-thumbnail";
+        img.className = picture.height > picture.width ? "album-thumbnail-vertical": "album-thumbnail-horizontal";
 
         div.appendChild(img);
 

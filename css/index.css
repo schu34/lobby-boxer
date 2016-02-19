@@ -13,6 +13,7 @@ body, html{
 .lb-section{
     min-height: 600px;
     width: 100%;
+    border-bottom: 2px solid rgb(240, 242, 144)
 }
 
 .lb-merch{
@@ -38,8 +39,8 @@ body, html{
 }
 
 .lb-player{
-    height: 10%;
-    min-height: 75px;
+    /*height: 10%;*/
+    height: 75px;
     width: 100%;
     background-color: rgb(240, 242, 144);
     /*display: inline-flex;*/
@@ -147,6 +148,10 @@ a{
     border-radius: 3px
 }
 
+.lb-album-cover:hover{
+    border: 3px solid rgb(102, 27, 27)
+}
+
 .album-cover-image{
     width: 50px;
     height: 50px;
@@ -180,6 +185,10 @@ a{
     border-radius: 3px;
 }
 
+.nav-button:hover{
+    background-color: rgb(102, 27, 27);
+}
+
 .nav{
     white-space: nowrap;
 }
@@ -199,10 +208,6 @@ a{
     transition: opacity .5s;
 }
 
-/*.lb-album-cover:hover .lb-album-info{
-    opacity: 1;
-    pointer-events: all;
-}*/
 
 .lb-album-info{
     position: fixed;
@@ -308,10 +313,6 @@ a{
     background-color: rgb(152, 27, 27);
 
 }
-
-/*th, td{
-    border: 2px solid rgb(152, 27, 27);
-}*/
 
 table{
     border-collapse: collapse;
