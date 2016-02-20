@@ -1,0 +1,25 @@
+.outer-video-wrapper{
+    visibility: hidden;
+}
+
+.bit-widget-container{
+    font-size: 26px !important;
+}
+
+.lb-section{
+    position: fixed;
+    left: 100%;
+    transition: all .5s;
+
+}
+
+.lb-section-title{
+    width: 100%;
+    text-align: center;
+}
+
+.lb-section-active{
+    position: fixed;
+    left: 0;
+    transition: all .5s;
+}
