@@ -18,7 +18,7 @@ window.addEventListener("load", function(){
         if(touchDownX > newX){
 
             var sections = document.getElementsByClassName('lb-section');
-            if(sections){
+            if(sections.length){
                 var activeSections = document.getElementsByClassName('lb-section-active');
                 activeSections[0].classList.add("lb-section-left");
                 activeSections[0].classList.remove("lb-section-active");
@@ -32,7 +32,7 @@ window.addEventListener("load", function(){
         } else if(touchDownX < newX){
             var leftSections = document.getElementsByClassName('lb-section-left');
 
-            if(leftSections){
+            if(leftSections.length){
                 var activeSections = document.getElementsByClassName('lb-section-active');
                 activeSections[0].classList.add("lb-section");
                 activeSections[0].classList.remove("lb-section-active");
