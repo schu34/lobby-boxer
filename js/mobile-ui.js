@@ -16,17 +16,35 @@ window.addEventListener("load", function(){
         var newX = e.changedTouches[0].clientX;
         console.log("touchMove: " + newX);
         if(touchDownX > newX){
+
             var sections = document.getElementsByClassName('lb-section');
-            sections[0].classList.add("lb-section-active");
-            sections[0].classList.remove("lb-section");
+            if(sections){
+                var activeSections = document.getElementsByClassName('lb-section-active');
+                activeSections[0].classList.add("lb-section-left");
+                activeSections[0].classList.remove("lb-section-active");
+
+
+                sections[0].classList.add("lb-section-active");
+                sections[0].classList.remove("lb-section");
+            }
+
             touchDownX = null;
         } else if(touchDownX < newX){
-            var activeSections = document.getElementsByClassName('lb-section-active');
-            var array = [].slice.call(activeSections);
+            var leftSections = document.getElementsByClassName('lb-section-left');
 
-            var section = array.pop();
-            section.classList.add("lb-section");
-            section.classList.remove("lb-section-active");
+            if(leftSections){
+                var activeSections = document.getElementsByClassName('lb-section-active');
+                activeSections[0].classList.add("lb-section");
+                activeSections[0].classList.remove("lb-section-active");
+
+
+
+                var array = [].slice.call(leftSections);
+
+                var section = array.pop();
+                section.classList.add("lb-section-active");
+                section.classList.remove("lb-section-left");
+            }
             touchDownX = null;
         }
 
