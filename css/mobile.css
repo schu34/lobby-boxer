@@ -9,6 +9,8 @@
 .lb-section{
     position: fixed;
     left: 100%;
+    width: 100%;
+    height: 100%;
     transition: all .5s;
 
 }
@@ -21,5 +23,11 @@
 .lb-section-active{
     position: fixed;
     left: 0;
+    width: 100%;
+    height: 100%;
     transition: all .5s;
+}
+
+body{
+    overflow: hidden;
 }
