@@ -13,7 +13,7 @@ body, html{
 .lb-section{
     min-height: 600px;
     width: 100%;
-    border-bottom: 2px solid rgb(240, 242, 144)
+    border-bottom: 2px solid rgb(240, 242, 144);
 }
 
 .lb-merch{
@@ -243,7 +243,7 @@ a{
     border-bottom: 2px solid rgb(240, 242, 144);
     border-left: 3px solid   rgb(240, 242, 144);
     border-right: 3px solid  rgb(240, 242, 144);
-    height: 60px;
+    height: 50px;
     margin: 50px;
     text-align: center;
 
@@ -313,6 +313,12 @@ a{
     background-color: rgb(152, 27, 27);
 
 }
+
+#nav-menu{
+    display: none;
+}
+
+
 
 table{
     border-collapse: collapse;

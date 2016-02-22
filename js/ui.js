@@ -44,7 +44,14 @@ window.addEventListener("load", function(){
 window.addEventListener(""); //TODO
 
 function showAlbumTable(album){
-    document.getElementById(album).className = "lb-album-info fade-in";
+    var el = document.getElementById(album);
+    if (el.classList.contains("fade-in")) {
+        el.className = "lb-album-info fade-out";
+    } else {
+        el.className = "lb-album-info fade-in";
+    }
+
+
 }
 
 function hideAlbumTable(album){
@@ -94,9 +101,12 @@ function drawPlayButton(node){
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "20");
     svg.setAttribute("height", "20");
+    svg.setAttribute("class", "svg");
+    svg.setAttribute("viewBox", "0 0 20 20");
     svg.setAttribute("id", "play-path");
     var polygon = document.createElementNS(xmlns, "polygon");
     polygon.setAttribute("points", "0,0 0,20 20,10");
+    polygon.setAttribute("class", "svg-path");
     polygon.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(polygon);
@@ -112,10 +122,13 @@ function drawPauseButton(){
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "15");
     svg.setAttribute("height", "20");
+    svg.setAttribute("class", "svg");
+    svg.setAttribute("viewBox", "0 0 20 20");
     svg.setAttribute("id", "play-path");
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M0,0 L0,20 L5,20 L5,0 L0,0 M10,0 L10,20 L15,20 L15,0, L10,0");
+    path.setAttribute("class", "svg-path");
     path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
@@ -127,10 +140,13 @@ function drawNextButton(){
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "20");
     svg.setAttribute("height", "20");
+    svg.setAttribute("viewBox", "0 0 20 20");
+    svg.setAttribute("class", "svg");
 
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 0 0 L 0 20 L 17.5 10 z M 20 0 L 17.5 0 L 17.5 20 L 20 20 z");
+    path.setAttribute("class", "svg-path");
     path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
@@ -142,10 +158,12 @@ function drawPrevButton() {
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "20");
     svg.setAttribute("height", "20");
-
+    svg.setAttribute("viewBox", "0 0 20 20");
+    svg.setAttribute("class", "svg");
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 20 0 L 20 20 L 2.5 10 z M 0 0 L 2.5 0 L 2.5 20 L 0 20 z");
+    path.setAttribute("class", "svg-path");
     path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
@@ -157,6 +175,7 @@ function drawDownArrow(node){
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "100");
     svg.setAttribute("height", "50");
+    svg.setAttribute("class", "svg");
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 50 50 L 0 0 L 10 0 L 50 40 L 90 0 L 100 0");
