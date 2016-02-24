@@ -65,7 +65,7 @@ function hideAlbumTables(){
 }
 
 function isVisable(albumTable){
-    return albumTable.className === "lb-album-info fadeout";
+    return albumTable.className === "lb-album-info fade-out";
 }
 
 function scroll() {

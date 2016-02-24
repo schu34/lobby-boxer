@@ -8,12 +8,31 @@ window.addEventListener("load", function(){
     touchDownY = null;
 
     window.addEventListener("touchstart", handleTouchStart, false);
-
     window.addEventListener("touchend", handleTouchEnd, false);
+
+    document.getElementById('nav-menu').addEventListener("click", showAlbumMenu);
+    document.getElementById('album-list').addEventListener("click", showAlbum);
+
+
     drawMenuButton();
 
 });
 
+function showAlbum(e){
+    document.getElementById('album-list').className = "lb-album-info fade-out";
+    if(e.target.innerText === "Teddy (EP)"){
+        document.getElementById('teddy').className = "lb-album-info fade-in";
+    }else if(e.target.innerText === "Big Bucks"){
+        document.getElementById('big-bucks').className = "lb-album-info fade-in";
+    } else if(e.target.innerText === "Lobby Boxer (EP)"){
+        document.getElementById("lobby-boxer").className = "lb-album-info fade-in";
+    }
+    e.stopPropagation();
+}
+
+function showAlbumMenu(){
+    document.getElementById('album-list').className = "lb-album-info fade-in";
+}
 
 function handleTouchStart(e){
     if(e.touches[0].target.classList.contains("lb-section-active")){
