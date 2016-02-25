@@ -10,11 +10,16 @@ window.addEventListener("load", function(){
     window.addEventListener("touchstart", handleTouchStart, false);
     window.addEventListener("touchend", handleTouchEnd, false);
 
+    document.getElementById('right-button').addEventListener("click", handleLeftSwipe);
+    document.getElementById('left-button').addEventListener("click", handleRightSwipe);
+
     document.getElementById('nav-menu').addEventListener("click", showAlbumMenu);
     document.getElementById('album-list').addEventListener("click", showAlbum);
 
 
     drawMenuButton();
+    drawLeftArrow();
+    drawRightArrow();
 
 });
 
@@ -57,6 +62,7 @@ function handleTouchEnd(e){
 
 function handleLeftSwipe(){
     var sections = document.getElementsByClassName('lb-section');
+    document.getElementById("left-button").className = "left-button fade-in";
     if(sections.length){
         var activeSections = document.getElementsByClassName('lb-section-active');
         activeSections[0].classList.add("lb-section-left");
@@ -65,11 +71,14 @@ function handleLeftSwipe(){
         sections[0].classList.add("lb-section-active");
         sections[0].classList.remove("lb-section");
     }
+    if(!sections.length){
+        document.getElementById('right-button').className = "right-button fade-out"
+    }
 }
 
 function handleRightSwipe(){
     var leftSections = document.getElementsByClassName('lb-section-left');
-
+    document.getElementById('right-button').className = "right-button fade-in";
     if(leftSections.length){
         var activeSections = document.getElementsByClassName('lb-section-active');
         activeSections[0].classList.add("lb-section");
@@ -81,6 +90,9 @@ function handleRightSwipe(){
 
         section.classList.add("lb-section-active");
         section.classList.remove("lb-section-left");
+    }
+    if(!leftSections.length){
+        document.getElementById('left-button').className = "left-button fade-out"
     }
 }
 
@@ -99,4 +111,38 @@ function drawMenuButton() {
     svg.appendChild(path);
 
     document.getElementById("nav-menu").appendChild(svg);
+}
+
+function drawLeftArrow(){
+    var svg = document.createElementNS(xmlns, "svg");
+    svg.setAttribute("width", "50");
+    svg.setAttribute("height", "100");
+    svg.setAttribute("viewBox", "0 0 50 100");
+    svg.setAttribute("class", "svg");
+
+    var path = document.createElementNS(xmlns, "path");
+    path.setAttribute("d", "M 50 0 L 10 50 L 50 100 L 40 100 L 0 50 L 40 0");
+    path.setAttribute("class", "svg-path");
+    path.setAttribute("fill", "rgb(240, 242, 144)");
+
+    svg.appendChild(path);
+
+    document.getElementById("left-button").appendChild(svg);
+}
+
+function drawRightArrow(){
+    var svg = document.createElementNS(xmlns, "svg");
+    svg.setAttribute("width", "50");
+    svg.setAttribute("height", "100");
+    svg.setAttribute("viewBox", "0 0 50 100");
+    svg.setAttribute("class", "svg");
+
+    var path = document.createElementNS(xmlns, "path");
+    path.setAttribute("d", "M 0 0 L 40 50 L 0 100 L 10 100 L 50 50 L 10 0");
+    path.setAttribute("class", "svg-path");
+    path.setAttribute("fill", "rgb(240, 242, 144)");
+
+    svg.appendChild(path);
+
+    document.getElementById("right-button").appendChild(svg);
 }

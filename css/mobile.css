@@ -105,6 +105,31 @@
     width: 100px;
 }
 
+.album-close-button{
+    right: 50px;
+    top: 69px;
+    width: 100px;
+}
+
+.left-button{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.right-button{
+    display: block;
+    position: fixed;
+    top:50%;
+    right: 10px;
+    transform: translate(0, -50%);
+}
+
+.left-button .svg .svg-path, .right-button .svg .svg-path{
+    fill: rgb(240, 242, 144);
+}
 
 body{
     overflow: hidden;

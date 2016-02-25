@@ -257,7 +257,20 @@ a{
     vertical-align: middle;
     position: absolute;
     top: 5px;
-    right: 10px
+    left: 10px
+}
+
+.album-close-button{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 20px;
+
+}
+
+.svg{
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -318,6 +331,10 @@ a{
     display: none;
 }
 
+
+.left-button, .right-button{
+    display: none;
+}
 
 
 table{

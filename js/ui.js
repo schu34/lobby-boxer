@@ -27,21 +27,26 @@ window.addEventListener("load", function(){
 
     for (var i = 0; i < albumPlayButtons.length; i++) {
         drawPlayButton(albumPlayButtons[i]);
-        albumPlayButtons[i].onclick = function(){
-            var album = this.parentNode.innerText;
-            if(album === "Big Bucks"){
-                playQueue.playAlbum(bigBucks);
-            } else if(album === "Teddy"){
-                playQueue.playAlbum(teddy);
-            } else{
-                playQueue.playAlbum(lobbyBoxerEP);
-            }
-        };
+        albumPlayButtons[i].onclick = playFullAlbum;
+    }
+    
+    var closeButtons = document.getElementsByClassName('album-close-button');
+    for (var i = 0; i < closeButtons.length; i++) {
+        drawCloseButton(closeButtons[i]);
     }
 
 });
 
-window.addEventListener(""); //TODO
+function playFullAlbum(e){
+    var album = e.target.innerText;
+    if(album === "Big Bucks"){
+        playQueue.playAlbum(bigBucks);
+    } else if(album === "Teddy"){
+        playQueue.playAlbum(teddy);
+    } else{
+        playQueue.playAlbum(lobbyBoxerEP);
+    }
+}
 
 function showAlbumTable(album){
     var el = document.getElementById(album);
@@ -179,6 +184,23 @@ function drawDownArrow(node){
 
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 50 50 L 0 0 L 10 0 L 50 40 L 90 0 L 100 0");
+    path.setAttribute("fill", "rgb(240, 242, 144)");
+
+    svg.appendChild(path);
+
+    node.appendChild(svg);
+}
+
+function drawCloseButton(node){
+    var svg = document.createElementNS(xmlns, "svg");
+    svg.setAttribute("width", "100");
+    svg.setAttribute("height", "100");
+    svg.setAttribute("viewBox", "0 0 100 100");
+    svg.setAttribute("class", "svg");
+
+    var path = document.createElementNS(xmlns, "path");
+    path.setAttribute("d", "M 0 0 L 10 0 L 100 100 L 90 100   M 90 0 L 100 0 L 10 100 L 0 100");
+    path.setAttribute("class", "svg-path");
     path.setAttribute("fill", "rgb(240, 242, 144)");
 
     svg.appendChild(path);
