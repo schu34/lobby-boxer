@@ -115,7 +115,7 @@
     display: block;
     position: fixed;
     top: 50%;
-    left: 1px;
+    left: 10px;
     transform: translate(0, -50%);
 }
 
@@ -123,11 +123,11 @@
     display: block;
     position: fixed;
     top:50%;
-    right: 1px;
+    right: 10px;
     transform: translate(0, -50%);
 }
 
-.left-button .svg .svg-path, .right-button .svg .svg-path{
+.left-button .svg path.svg-path, .right-button .svg path.svg-path{
     fill: rgb(240, 242, 144);
 }
 

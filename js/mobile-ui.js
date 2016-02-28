@@ -72,7 +72,7 @@ function handleLeftSwipe(){
         sections[0].classList.remove("lb-section");
     }
     if(!sections.length){
-        document.getElementById('right-button').className = "right-button fade-out"
+        document.getElementById('right-button').className = "right-button fade-out";
     }
 }
 
@@ -92,7 +92,7 @@ function handleRightSwipe(){
         section.classList.remove("lb-section-left");
     }
     if(!leftSections.length){
-        document.getElementById('left-button').className = "left-button fade-out"
+        document.getElementById('left-button').className = "left-button fade-out";
     }
 }
 

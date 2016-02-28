@@ -29,10 +29,10 @@ window.addEventListener("load", function(){
         drawPlayButton(albumPlayButtons[i]);
         albumPlayButtons[i].onclick = playFullAlbum;
     }
-    
+
     var closeButtons = document.getElementsByClassName('album-close-button');
-    for (var i = 0; i < closeButtons.length; i++) {
-        drawCloseButton(closeButtons[i]);
+    for (var j = 0; j < closeButtons.length; j++) {
+        drawCloseButton(closeButtons[j]);
     }
 
 });

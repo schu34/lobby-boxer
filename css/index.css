@@ -145,7 +145,8 @@ a{
     height: 50px;
     position: relative;
     border: 3px solid rgb(152, 27, 27);
-    border-radius: 3px
+    border-radius: 3px;
+    transition: border .2s;
 }
 
 .lb-album-cover:hover{
@@ -183,6 +184,7 @@ a{
     border: 0;
     background-color: rgb(152, 27, 27);
     border-radius: 3px;
+    transition: background-color .2s;
 }
 
 .nav-button:hover{
@@ -318,6 +320,8 @@ a{
     height: 100%;
     position: relative;
 }
+
+
 
 .lb-photos{
     width: 100%;

@@ -1,0 +1,80 @@
+.merch-container{
+    width: 80%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: scroll;
+
+    background-color:rgb(152, 27, 27);
+    border-radius: 5px;
+    border: 3px solid rgb(240, 242, 144);
+    white-space: nowrap;
+    text-align: center;
+
+}
+
+.merch-squares{
+    margin: auto;
+}
+
+.merch-square{
+    height: 40vh;
+    width: 40vh;
+    white-space: nowrap;
+    margin: 10px;
+    border: 2px solid rgb(240, 242, 144);
+    display: inline-block;
+    position: relative;
+}
+
+.merch-description{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50% ,-50%);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.merch-square:hover .merch-description{
+    opacity:1;
+}
+
+.merch-title{
+    color: rgb(240, 242, 144);
+}
+
+.buy-button{
+    border: 1px solid rgb(240, 242, 144);
+    color:rgb(240, 242, 144);
+    background-color: rgb(152, 27, 27);
+    font-family: "Raleway";
+    font-size: 1.5em;
+    transition: background-color .2s;
+    border-radius: 2px;
+}
+
+.buy-button:hover{
+    background-color: rgb(102, 27, 27);
+
+}
+
+.merch-photo-container{
+    height: 100%;
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+.merch-photo{
+    height: 100%;
+}
+
+.merch-square:hover .merch-photo-container{
+    opacity: .2;
+}
+/*.merch-square-left{
+    float: left;
+}
+
+.merch-square-right{
+    float: right;
+}*/
