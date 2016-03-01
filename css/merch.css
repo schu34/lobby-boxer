@@ -51,6 +51,7 @@
     font-size: 1.5em;
     transition: background-color .2s;
     border-radius: 2px;
+    position: relative;
 }
 
 .buy-button:hover{
@@ -70,6 +71,25 @@
 
 .merch-square:hover .merch-photo-container{
     opacity: .2;
+}
+
+.buy-button:hover .size-selector{
+    opacity: 1;
+}
+
+.size-selector{
+    position: absolute;
+    top: 105%;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.size-option{
+    display: inline-block;
+}
+
+.size-option:hover{
+    background-color: rgb(102, 27, 27);
 }
 /*.merch-square-left{
     float: left;
