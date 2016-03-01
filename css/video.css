@@ -1,0 +1,33 @@
+.video-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition: opacity .2s;
+    font-size: 2em;
+    white-space: normal;
+    text-align: center;
+}
+
+.lb-photo-album:hover .album-thumbnail-vid{
+    opacity: .2;
+    transition: opacity .2s;
+}
+
+.lb-photo-album:hover .video-info{
+    opacity: 1;
+}
+
+.album-thumbnail-vid{
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: auto;
+    transition: opacity .2s;
+}
+
+.lb-photos h1{
+    color:rgb(142, 197, 235);
+}
