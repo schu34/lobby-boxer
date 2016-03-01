@@ -60,10 +60,10 @@
 }
 
 
-.lb-album-container::-webkit-scrollbar-track-piece{
+/*.lb-album-container::-webkit-scrollbar-track-piece{
     background-color: rgb(142, 197, 235);
     /*display: none;*/
-}
+}*/
 
 html{
     background-color: rgb(142, 197, 235);

@@ -1,0 +1,52 @@
+.lb-press{
+    height: 100%;
+    position: relative;
+    color:rgb(152, 27, 27);
+}
+
+
+.press-container{
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    /*max-height: 270px;*/
+    white-space: nowrap;
+    background-color: rgb(152, 27, 27);
+    border-radius: 5px;
+    border: 3px solid rgb(240, 242, 144);
+}
+
+.press-title{
+    color: rgb(152, 27, 27);
+}
+
+.press-link-container{
+    width: 100%;
+    border-bottom: 2px solid rgb(240, 242, 144);
+
+}
+
+.press-link-container:hover{
+    background-color:rgb(102, 27, 27);
+
+}
+
+.press-link-container:hover .press-link-text{
+    margin-left: 20px;
+}
+
+.press-link{
+
+}
+
+.press-link-text{
+    font-weight: 400;
+    /*margin-left: 20px;*/
+    padding: 20px;
+    transition: margin .5s;
+}
