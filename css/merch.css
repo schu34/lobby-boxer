@@ -3,7 +3,7 @@
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    overflow-x: scroll;
+    overflow-x: auto;
 
     background-color:rgb(152, 27, 27);
     border-radius: 5px;

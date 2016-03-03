@@ -108,21 +108,6 @@ app.post('/checkout', function(req, res) {
         });
     }
 
-
-    // var charge = stripe.charges.create({
-    //     amount: 1500, // amount in cents, again
-    //     currency: "usd",
-    //     source: stripeToken,
-    //     description: "Example charge",
-    //     metadata: req.body.metadata
-    // }, function(err, charge) {
-    //     if (err && err.type === 'StripeCardError') {
-    //         // The card has been declined
-    //     }
-    // });
-    // res.status(302);
-    // res.send();
-
 });
 
 
