@@ -70,7 +70,7 @@ function hideAlbumTables(){
 }
 
 function isVisable(albumTable){
-    return albumTable.className === "lb-album-info fade-out";
+    return albumTable.className === "lb-album-info fade-in";
 }
 
 function scroll() {

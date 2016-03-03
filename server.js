@@ -21,6 +21,10 @@ var FBtagged = "&type=uploaded";
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
 
+app.get("/", function(req, res){
+    res.sendFile(__dirname + "/html/index.html");
+});
+
 
 function getPhotoList(callback) {
     var url = FBPhotosUrl + accessKey + FBlinkReq; //+ FBtagged;
@@ -58,7 +62,7 @@ app.post('/checkout', function(req, res) {
                     }, function(err, charge) {
                         if (err && err.type === 'StripeCardError') {
                             // The card has been declined
-                            res.send("card-declined")
+                            res.send("card-declined");
                         } else {
                             stripe.skus.update(skuId, {
                                 inventory: {

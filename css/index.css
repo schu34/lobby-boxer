@@ -13,6 +13,7 @@ body, html {
     min-height: 600px;
     width: 100%;
     border-bottom: 2px solid rgb(240, 242, 144);
+    transform: translateZ(0);
 }
 .lb-merch {
     background-color: rgb(142, 197, 235);
@@ -72,13 +73,29 @@ h1 {
     color: rgb(152, 27, 27);
     transition: all .2s, background-color 1ms, color 1ms;
     font-size: 2.5em;
-    width: 100%;
+    width: 100px;
     text-align: center;
     background-color: rgb(240, 242, 144);
     opacity: .9;
-    height: 50px;
+    height: 100px;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
+    overflow: hidden;
+    transition: all .5s;
+}
+.lb-nav-sticky ul{
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+.lb-nav-sticky:hover{
+    width: 350px;
+    height: 350px;
+    transition: all .5s;
+}
+.lb-nav-sticky:hover *{
+    opacity: 1;
+    pointer-events: all;
 }
 ul {
     margin: 0;
@@ -100,7 +117,7 @@ a {
     color: rgb(152, 27, 27);
 }
 li {
-    display: inline;
+    display: block;
 }
 a {
     text-decoration: none;
@@ -289,6 +306,6 @@ progress {
     content: "|"
 }
 
-.lb-nav-list:first-child::before{
+.lb-nav-list::before{
     content:"|"
 }

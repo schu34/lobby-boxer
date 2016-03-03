@@ -142,3 +142,10 @@ body{
 #nav-menu{
     display: inline-block;
 }
+
+
+.nav-list{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
