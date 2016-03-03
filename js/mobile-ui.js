@@ -1,5 +1,5 @@
 var xmlns = "http://www.w3.org/2000/svg";
-window.addEventListener("load", function(){
+window.addEventListener("load", function() {
     document.getElementById('header').className = "lb-section-active container-1";
 
     console.log("mobile stuff loaded");
@@ -28,54 +28,58 @@ window.addEventListener("load", function(){
 
 });
 
-function showAlbum(e){
+function showAlbum(e) {
     document.getElementById('album-list').className = "lb-album-info fade-out";
-    if(e.target.innerText === "Teddy (EP)"){
+    if (e.target.innerText === "Teddy (EP)") {
         document.getElementById('teddy').className = "lb-album-info fade-in";
-    }else if(e.target.innerText === "Big Bucks"){
+    } else if (e.target.innerText === "Big Bucks") {
         document.getElementById('big-bucks').className = "lb-album-info fade-in";
-    } else if(e.target.innerText === "Lobby Boxer (EP)"){
+    } else if (e.target.innerText === "Lobby Boxer (EP)") {
         document.getElementById("lobby-boxer").className = "lb-album-info fade-in";
     }
     e.stopPropagation();
 }
 
-function goToSection(e){
-    var sectionId = e.target.innerText.toUpperCase();
-    while(document.getElementsByClassName("lb-section-active")[0].id.toUpperCase !== sectionId){
-        handleLeftSwipe();
+function goToSection(e) {
+    if (screen.width < 480) {
+        var sectionId = e.target.innerText.toUpperCase();
+        var currentId = document.getElementsByClassName("lb-section-active")[0].id.toUpperCase()
+        while (currentId !== sectionId) {
+            handleLeftSwipe();
+            currentId = document.getElementsByClassName("lb-section-active")[0].id.toUpperCase();
+        }
     }
 }
 
-function showAlbumMenu(){
+function showAlbumMenu() {
     document.getElementById('album-list').className = "lb-album-info fade-in";
 }
 
-function handleTouchStart(e){
-    if(e.touches[0].target.classList.contains("lb-section-active")){
+function handleTouchStart(e) {
+    if (e.touches[0].target.classList.contains("lb-section-active")) {
         touchDownX = e.touches[0].clientX;
     } else {
         touchDownX = null;
     }
 }
 
-function handleTouchEnd(e){
-    if(touchDownX){
+function handleTouchEnd(e) {
+    if (touchDownX) {
         var newX = e.changedTouches[0].clientX;
-        if(touchDownX > newX){
+        if (touchDownX > newX) {
             handleLeftSwipe();
             touchDownX = null;
-        } else if(touchDownX < newX){
+        } else if (touchDownX < newX) {
             handleRightSwipe();
             touchDownX = null;
         }
     }
 }
 
-function handleLeftSwipe(){
+function handleLeftSwipe() {
     var sections = document.getElementsByClassName('lb-section');
     document.getElementById("left-button").className = "left-button fade-in";
-    if(sections.length){
+    if (sections.length) {
         var activeSections = document.getElementsByClassName('lb-section-active');
         activeSections[0].classList.add("lb-section-left");
         activeSections[0].classList.remove("lb-section-active");
@@ -83,15 +87,15 @@ function handleLeftSwipe(){
         sections[0].classList.add("lb-section-active");
         sections[0].classList.remove("lb-section");
     }
-    if(!sections.length){
+    if (!sections.length) {
         document.getElementById('right-button').className = "right-button fade-out";
     }
 }
 
-function handleRightSwipe(){
+function handleRightSwipe() {
     var leftSections = document.getElementsByClassName('lb-section-left');
     document.getElementById('right-button').className = "right-button fade-in";
-    if(leftSections.length){
+    if (leftSections.length) {
         var activeSections = document.getElementsByClassName('lb-section-active');
         activeSections[0].classList.add("lb-section");
         activeSections[0].classList.remove("lb-section-active");
@@ -103,7 +107,7 @@ function handleRightSwipe(){
         section.classList.add("lb-section-active");
         section.classList.remove("lb-section-left");
     }
-    if(!leftSections.length){
+    if (!leftSections.length) {
         document.getElementById('left-button').className = "left-button fade-out";
     }
 }
@@ -125,7 +129,7 @@ function drawMenuButton() {
     document.getElementById("nav-menu").appendChild(svg);
 }
 
-function drawLeftArrow(){
+function drawLeftArrow() {
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "50");
     svg.setAttribute("height", "100");
@@ -142,7 +146,7 @@ function drawLeftArrow(){
     document.getElementById("left-button").appendChild(svg);
 }
 
-function drawRightArrow(){
+function drawRightArrow() {
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "50");
     svg.setAttribute("height", "100");
