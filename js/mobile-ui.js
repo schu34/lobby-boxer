@@ -16,6 +16,11 @@ window.addEventListener("load", function(){
     document.getElementById('nav-menu').addEventListener("click", showAlbumMenu);
     document.getElementById('album-list').addEventListener("click", showAlbum);
 
+    var navLinks = document.getElementsByClassName('lb-nav-list');
+
+    for (var i = 0; i < navLinks.length; i++) {
+        navLinks[i].onclick = goToSection;
+    }
 
     drawMenuButton();
     drawLeftArrow();
@@ -33,6 +38,13 @@ function showAlbum(e){
         document.getElementById("lobby-boxer").className = "lb-album-info fade-in";
     }
     e.stopPropagation();
+}
+
+function goToSection(e){
+    var sectionId = e.target.innerText.toUpperCase();
+    while(document.getElementsByClassName("lb-section-active")[0].id.toUpperCase !== sectionId){
+        handleLeftSwipe();
+    }
 }
 
 function showAlbumMenu(){

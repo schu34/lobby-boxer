@@ -309,3 +309,7 @@ progress {
 .lb-nav-list::before{
     content:"|"
 }
+
+.disable{
+    pointer-events: none;
+}

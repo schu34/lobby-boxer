@@ -153,3 +153,7 @@ body{
 .scroll-container{
     backface-visibility: hidden;
 }
+
+.lb-photo-album{
+    transform: translateZ(0);
+}
