@@ -149,3 +149,7 @@ body{
     width: 100%;
     text-align: center;
 }
+
+.scroll-container{
+    backface-visibility: hidden;
+}
