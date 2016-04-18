@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 var request = require('request');
 var async = require('async');
 
-var stripe = require('stripe')('sk_test_RoAk4Cn4A2jPrdiqp0wJs7wF');
+var stripe = require('stripe')('sk_live_cBnpupKibdAMZHGqItcraaNd');
 
 var FBid = '887526761334958';
 var FBSecret = 'f8e8b4d25231bbea3e83e8fb83de022c';
