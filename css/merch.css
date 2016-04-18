@@ -73,24 +73,35 @@
     opacity: .2;
 }
 
-.buy-button:hover .size-selector{
+.buy-button-container:hover .size-selector{
     opacity: 1;
 }
 
+
+
 .size-selector{
     position: absolute;
-    top: 105%;
+    top: 100%; left: 50%;
+    transform: translate(-50%, 0);
     opacity: 0;
     transition: opacity .2s;
+    pointer-events: all;
 }
 
 .size-option{
     display: inline-block;
+    color: rgb(240, 242, 144);
+    font-size: 1.5em;
 }
 
 .size-option:hover{
     background-color: rgb(102, 27, 27);
 }
+
+.merch-pack-options{
+    margin-top: 5px;
+}
+
 /*.merch-square-left{
     float: left;
 }

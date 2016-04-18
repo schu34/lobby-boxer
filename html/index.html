@@ -68,21 +68,7 @@
 
                 <div class="merch-container scroll-container">
                     <div class="merch-squares">
-                        <div class="merch-square merch-square-left">
-                            <div class="merch-photo-container"><img src="/img/pack-photo.jpg" class="merch-photo"/></div>
-                            <div class="merch-description">
-                                <h2 class="merch-title">Big Bucks CD
-                                    <br>+<br>
-                                    Cat T-Shirt
-                                    <br>
-                                    <small>
-                                        $20.00</small>
-                                </h2>
-                                <button type="button" class="buy-button disable" id="buy-pack-button">
-                                    Coming Soon!</button>
-                            </div>
-                        </div>
-                        <div class="merch-square merch-square-middle">
+                        <div class="merch-square">
                             <div class="merch-photo-container">
                                 <img src="/img/cds.jpg" class="merch-photo" alt="Big Bucks CD"/></div>
                             <div class="merch-description">
@@ -90,25 +76,75 @@
                                     <br>
                                     <small>$10.00</small>
                                 </h2>
-                                <button type="button" class="buy-button disable" id="buy-cd-button">Coming Soon!</button>
+                                <button type="button" class="buy-button " id="buy-cd-button">Buy Now</button>
                             </div>
                         </div>
-                        <div class="merch-square merch-square-right">
-                            <div class="merch-photo-container"><img src="/img/shirt-photo.jpg" class="merch-photo"/></div>
+                        <div class="merch-square ">
+                            <div class="merch-photo-container"><img src="/img/cat-shirt-picture.jpg" class="merch-photo"/></div>
                             <div class="merch-description">
                                 <h2 class="merch-title">Cat T-shirt
                                     <br>
                                     <small>$15.00</small>
                                 </h2>
-                                <button type="button" class="buy-button disable" id="buy-shirt-button">
-                                    Coming Soon!
+                                <div class="buy-button-container" id="cat-shirt-button-container">
+                                    <button type="button" class="buy-button" id="buy-cat-shirt-button">
+                                        Buy Now
+                                    </button>
                                     <div class="size-selector">
-                                        <div class="size-option">S</div>
+                                        <div class="size-option" id="small-selector">S</div>
                                         <div class="size-option">M</div>
                                         <div class="size-option">L</div>
                                         <div class="size-option">XL</div>
                                     </div>
-                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="merch-square ">
+                            <div class="merch-photo-container"><img src="/img/knife-shirt-picture.jpg" class="merch-photo"/></div>
+                            <div class="merch-description">
+                                <h2 class="merch-title">Knife T-shirt
+                                    <br>
+                                    <small>$15.00</small>
+                                </h2>
+                                <div class="buy-button-container" id="knife-shirt-button-container">
+                                    <button type="button" class="buy-button">
+                                        Buy Now
+                                    </button>
+                                    <div class="size-selector">
+                                        <div class="size-option" id="small-selector-k">S</div>
+                                        <div class="size-option">M</div>
+                                        <div class="size-option">L</div>
+                                        <div class="size-option">XL</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="merch-square">
+                            <div class="merch-photo-container"><img src="/img/pack-photo.jpg" class="merch-photo"/></div>
+                            <div class="merch-description">
+                                <h2 class="merch-title">Big Bucks CD
+                                    <br>+<br>
+                                    Your Choice of T-Shirt
+                                    <br>
+                                    <small>
+                                        $20.00</small>
+                                </h2>
+                                <button type="button" class="buy-button " id="buy-merch-pack-button">
+                                    Buy Now</button>
+                                <div class="merch-pack-options">
+                                    <select class="shirt-selector" name="shirt-selector" id="shirt-selector">
+                                        <option value="">Select Shirt</option>
+                                        <option value="knife">Knife T-shirt</option>
+                                        <option value="cat">Cat T-shirt</option>
+                                    </select>
+                                    <select class="shirt-size-selector" name="shirt-size-selector" id="shirt-size-selector">
+                                        <option value="">Shirt Size</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>

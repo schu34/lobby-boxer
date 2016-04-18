@@ -7,6 +7,7 @@
   "description": "Lobby Boxer Website",
   "main": "server.js",
   "dependencies": {
+    "async": "^1.5.2",
     "body-parser": "^1.15.0",
     "express": "^4.13.0",
     "request": "^2.58.0",
