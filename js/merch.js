@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
     });
 
     document.getElementById('cat-shirt-button-container').addEventListener("click", function(e) {
-        size = e.target.textContent || e.target.innerText;
+        size = document.getElementById('cat-shirt-size-selector').value;
 
         if (size === "S" ||
             size === "M" ||
@@ -30,7 +30,7 @@ window.addEventListener("load", function() {
     });
 
     document.getElementById('knife-shirt-button-container').addEventListener("click", function(e) {
-        size = e.target.textContent || e.target.innerText;
+        size = document.getElementById('knife-shirt-size-selector').value;
         if (size === "S" ||
             size === "M" ||
             size === "L" ||
@@ -45,7 +45,7 @@ window.addEventListener("load", function() {
 
     document.getElementById("buy-merch-pack-button").addEventListener("click", function(e){
         var shirtType = document.getElementById('shirt-selector').value;
-        var shirtSize = document.getElementById('shirt-size-selector').value;
+        var shirtSize = document.getElementById('pack-shirt-size-selector').value;
         var album = "big-bucks";//for now, since theres only one album
 
         if (shirtType && shirtSize && album) {
