@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
 
     var handler = StripeCheckout.configure({
         key: 'pk_live_irQYOgZ48bFBO0ws2TWYASgn',
-        image: '/img/documentation/checkout/marketplace.png',
+        //image: '/img/documentation/checkout/marketplace.png',
         locale: 'auto',
         shippingAddress: 'true',
         billingAddress: 'true'
