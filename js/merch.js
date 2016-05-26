@@ -83,7 +83,7 @@ function buyShirt(type, size, handler){
     var options  = {
         name: type,
         description: "1 shirt",
-        amount: 1500,
+        // amount: 1500,
         token: function(token, addresses) {
             token.metadata = addresses;
             token.metadata.size = size;
@@ -100,7 +100,7 @@ function buyCd(album, handler){
     var options = {
         name: 'Big Bucks CD',
         description: '1 CD',
-        amount: 1000,
+        // amount: 1000,
         token: function(token, addresses) {
             // Use the token to create the charge with a server-side script.
             // You can access the token ID with `token.id`
@@ -122,7 +122,7 @@ function buyMerchPack(shirtType, shirtSize, album, handler){
     var options = {
         name:"Merch Pack",
         description:"1 shirt + 1 cd",
-        amount: 2000,
+        // amount: 2000,
         token: function(token, addresses){
             token.metadata = addresses;
             token.metadata.prod = "pack";

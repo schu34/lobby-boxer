@@ -134,6 +134,14 @@ function checkSoldOut(token, price, skuIds){
 
 function createCharge(token, price, skus){
 
+    var domesticShipping = 300, internationShipping = 1400
+
+    if (token.metadata.shipping_address_country_code == "US") {
+        price += domesticShipping;
+    } else {
+        price += internationShipping;
+    }
+
     console.log("createing charge...");
 
     var options = {
