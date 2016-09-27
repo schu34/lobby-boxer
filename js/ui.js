@@ -38,10 +38,15 @@ window.addEventListener("load", function(){
 });
 
 function playFullAlbum(e){
-    var album = e.target.innerText;
-    if(album === "Big Bucks"){
+    //get parent untill we find somthing with innner text;
+    var element = e.target;
+    while(element.innerText === undefined || element.innerText === "") element = element.parentNode;
+
+    var album = element.innerText;
+    console.log(album);
+    if(album.trim() === "Big Bucks"){
         playQueue.playAlbum(bigBucks);
-    } else if(album === "Teddy"){
+    } else if(album.trim() === "Teddy"){
         playQueue.playAlbum(teddy);
     } else{
         playQueue.playAlbum(lobbyBoxerEP);

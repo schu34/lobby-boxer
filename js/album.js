@@ -12,7 +12,7 @@ function Album(title, numTracks, tracklist){
 
 var teddyTracks = ["These Is Fightin' Words", "You're Not An Immigrant, Yet", "Midwest Bedtime Stories"];
 
-var Teddy = new Album("Teddy", 3, teddyTracks);
+var teddy = new Album("Teddy", 3, teddyTracks);
 
 var lobbyBoxerTracks = ["A Perfect Future", "The Truman Show", "Headrush", "Cap'n Gown", "Fragile Girl"];
 
