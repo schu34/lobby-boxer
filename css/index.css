@@ -64,6 +64,7 @@ h1 {
     transition: all .2s, background-color 1ms, color 1ms;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
+    margin-top: 20px;
 }
 .lb-nav-sticky {
     position: fixed;
@@ -93,7 +94,7 @@ h1 {
     height: 350px;
     transition: all .5s;
 }
-.lb-nav-sticky:hover *{
+.lb-nav-sticky:hover ul{
     opacity: 1;
     pointer-events: all;
 }
@@ -107,6 +108,26 @@ ul {
 .lb-nav-sticky a:hover {
     margin: 0 40px 0 40px;
     color: rgb(142, 197, 235);
+}
+#menu-icon{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all .5s;
+    transition-timing-function: cubic-bezier(0.86, -0.71, 1, 1);
+    z-index: -10;
+}
+#menu-icon svg{
+    width: 50%;
+    height: 50%;
+    margin-top: 25%;
+}
+.lb-nav-sticky:hover #menu-icon{
+    opacity: 0;
+    transition: all 0s
+}
+.hidden{
+    opacity:0;
 }
 a {
     color: rgb(240, 242, 144);

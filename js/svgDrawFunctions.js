@@ -113,7 +113,9 @@ function drawCloseButton(node){
 
 
 //Mobile Stuff
-function drawMenuButton() {
+function drawMenuButton(node, color) {
+    node  = node || document.getElementById("nav-menu");
+    color = color || "rgb(240, 242, 144)";
     var svg = document.createElementNS(xmlns, "svg");
     svg.setAttribute("width", "100");
     svg.setAttribute("height", "100");
@@ -123,11 +125,11 @@ function drawMenuButton() {
     var path = document.createElementNS(xmlns, "path");
     path.setAttribute("d", "M 0 0  L 100 0  L 100 20  L 0 20 M 0 40 L 100 40 L 100 60  L 0 60 M 0 80 L 100 80 L 100 100 L 0 100");
     path.setAttribute("class", "svg-path");
-    path.setAttribute("fill", "rgb(240, 242, 144)");
+    path.setAttribute("fill", color);
 
     svg.appendChild(path);
 
-    document.getElementById("nav-menu").appendChild(svg);
+    node.appendChild(svg);
 }
 
 function drawLeftArrow() {

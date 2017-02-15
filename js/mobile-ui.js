@@ -99,6 +99,7 @@ function handleRightSwipe() {
         var activeSections = document.getElementsByClassName('lb-section-active');
         activeSections[0].classList.add("lb-section");
         activeSections[0].classList.remove("lb-section-active");
+
         //the easiest way to get the last element from an html collection
         var array = [].slice.call(leftSections);
         var section = array.pop();

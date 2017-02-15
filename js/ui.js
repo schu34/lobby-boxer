@@ -35,10 +35,12 @@ window.addEventListener("load", function(){
         drawCloseButton(closeButtons[j]);
     }
 
+    drawMenuButton(document.getElementById("menu-icon"), "rgb(142, 197, 235)")
+
 });
 
 function playFullAlbum(e){
-    //get parent untill we find somthing with innner text;
+    //get parent until we find somthing with innner text;
     var element = e.target;
     while(element.innerText === undefined || element.innerText === "") element = element.parentNode;
 
@@ -80,11 +82,14 @@ function isVisable(albumTable){
 
 function scroll() {
     var navBar = document.getElementById('nav');
+    var menuIcon = document.getElementById('menu-icon');
 
     console.log("scroll event detected");
     if(window.scrollY > 260){
+        menuIcon.className = ""
         navBar.className = "lb-nav-sticky";
     } else {
+        menuIcon.className = "hidden"
         navBar.className = "lb-navbar";
     }
 }
